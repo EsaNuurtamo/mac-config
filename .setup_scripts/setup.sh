@@ -16,6 +16,8 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Hide files which are not explicitly tracked
 dotfiles config --local status.showUntrackedFiles no
 
+dotfiles checkout
+
 # Install brew and all the applications and tools
 echo "Installing brew applications and tools..."
 sh .setup_scripts/brew.sh
