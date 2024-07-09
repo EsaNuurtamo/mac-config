@@ -1,0 +1,69 @@
+cask_args appdir: '/Applications'
+
+# Install cask
+tap 'homebrew/cask'
+tap 'homebrew/cask-versions'
+# Integrates Homebrew formulae with macOS' `launchctl` manager
+tap 'homebrew/services'
+# A CLI tool upgrading every outdated app installed by Homebrew Cask
+# INFO: brew cu
+tap 'buo/cask-upgrade'
+# Mac App Store command line interface
+brew 'mas'
+
+brew 'openssl'
+
+cask 'iterm2'
+brew 'tmux'
+
+cask 'google-chrome'
+
+brew 'git'
+brew 'git-lfs'
+brew 'git-extras'
+brew 'git-secrets'
+brew 'lazygit'
+
+brew 'fish'
+brew 'tree'
+
+brew 'wget'
+#backup your app settings to cloud
+brew 'mackup'
+
+brew 'node'
+brew 'n'
+brew 'python'
+brew 'go'
+brew 'lua'
+brew 'luarocks'
+brew 'pyenv'
+brew 'rust'
+
+#editing
+brew 'ripgrep'
+brew 'fd'
+
+brew 'postgresql'
+
+#containers
+brew 'docker'
+brew 'docker-compose'
+
+brew 'awscli'
+cask 'aws-vault'
+
+brew 'vim'
+brew 'neovim'
+cask 'visual-studio-code'
+
+# Know your short cuts
+cask 'cheatsheet'
+cask 'julia'
+# A powerful and stable keyboard customizer for macOS
+cask 'karabiner-elements'
+#window manager
+cask 'rectangle'
+
+
+mas 'Slack', id: 803453959

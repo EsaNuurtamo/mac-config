@@ -1,0 +1,21 @@
+[user]
+	name = Esa Nuurtamo
+	email = esa.nuurtamo@helsinki.fi
+[http]
+	sslVerify = true
+	postBuffer = 524288000
+[core]
+	excludesfile = /Users/Esa/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/Esa/.stCommitMsg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

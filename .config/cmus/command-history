@@ -1,0 +1,55 @@
+man(222312222
+set pl-sort=track
+pl-sort(filename, track)
+pl-sort=filename
+pl-sort track
+lib-sort= filename
+lib-sort=filename artist
+1
+sort-by(filename)
+sort filename
+lib-sort ( §
+lib-sort=filename
+lib-sort filename
+q
+wq
+help
+hep
+quit
+set altformat_title=%F%
+set format_title=$(head -n1 <<< $(cmus-remote -Q) | awk '{print $2}') %a - %l - %t (%y)
+set altformat_title=%-25%F%
+set altformat_playlist=%-20(%F,plays:%X)  %-50%f%=
+set altformat_playlist=%-20%F(plays:%X)  %-50%f%=
+set altformat_playlist=%-20%F Plays:%-10%X  %-50%f%=
+set altformat_playlist=%-25%F %3n. %-10%X  %-50%f%=
+set altformat_playlist=%40F %3n. %-10%X  %-50%f%=
+set altformat_playlist=%-25%F %3n. %-15%{filemtime}  %-50%f%=
+set altformat_playlist=%-25%F %-15%y %-15%{filemtime}  %-50%f%=
+set altformat_playlist=%-25%F %-15%y %-15%{modified}  %-50%f%=
+set altformat_playlist=%-25%F %-15%y %-15%{maxdate}  %-50%f%=
+set altformat_playlist=%-25%F %-15%y %-15%%{maxdate}}  %-50%f%=
+set altformat_playlist=%-25%F %-15%y %-10%{media} %-50%f%=
+set altformat_playlist=%-25%F %-15%{originaldate} %-10%{media} %-50%f%=
+set altformat_playlist=%25-%F %15-%{originaldate} %10-%{media} %f%=
+set altformat_playlist=%25-%F %15-%{originaldate} %10-%{media} %50-%f%=
+set altformat_playlist=%f%=
+set altformat_playlist=%F %f%=
+set altformat_playlist=%F (%f)%=
+set altformat_playlist=%F (%f)%+
+set altformat_playlist=%F (%f)
+set altformat_playlist=%F %f
+set lib_sort=title
+set lib_sort=filename
+set lib_sort
+set lib_sort filename
+sort
+save -l
+save -p
+pl-create instrumental
+pl-create songs
+pl-create orchestral
+pl-create
+pl-create minimal-classical
+pl-create beats
+pl-create piano
