@@ -20,3 +20,11 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+function __nvm_auto_use --on-variable PWD
+  if test -f .nvmrc
+    nvm use
+  end
+end
+__nvm_auto_use
+# Added by Windsurf
+fish_add_path /Users/esa/.codeium/windsurf/bin
