@@ -1,66 +1,69 @@
-#!/usr/bin/env bash
+cask_args appdir: '/Applications'
 
-# Set application directory for cask installations
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# Install cask
+tap 'homebrew/cask'
+tap 'homebrew/cask-versions'
+# Integrates Homebrew formulae with macOS' `launchctl` manager
+tap 'homebrew/services'
+# A CLI tool upgrading every outdated app installed by Homebrew Cask
+# INFO: brew cu
+tap 'buo/cask-upgrade'
+# Mac App Store command line interface
+brew 'mas'
 
-# Tap necessary repositories
-brew tap homebrew/cask
-brew tap homebrew/cask-versions
-brew tap homebrew/services
-brew tap buo/cask-upgrade
+brew 'openssl'
 
-# Install command line tools and applications
-brew install mas
-brew install openssl
+cask 'iterm2'
+brew 'tmux'
 
-brew install --cask iterm2
-brew install tmux
+cask 'google-chrome'
 
-brew install --cask google-chrome
+brew 'git'
+brew 'git-lfs'
+brew 'git-extras'
+brew 'git-secrets'
+brew 'lazygit'
 
-brew install git
-brew install git-lfs
-brew install git-extras
-brew install git-secrets
-brew install lazygit
+brew 'fish'
+brew 'tree'
 
-brew install fish
-brew install tree
+brew 'wget'
+#backup your app settings to cloud
+brew 'mackup'
 
-brew install wget
-brew install mackup
+brew 'node'
+brew 'n'
+brew 'python'
+brew 'go'
+brew 'lua'
+brew 'luarocks'
+brew 'pyenv'
+brew 'rust'
 
-brew install node
-brew install n
-brew install python
-brew install go
-brew install lua
-brew install luarocks
-brew install pyenv
-brew install rust
+#editing
+brew 'ripgrep'
+brew 'fd'
 
-# Editing tools
-brew install ripgrep
-brew install fd
+brew 'postgresql'
 
-brew install postgresql
+#containers
+brew 'docker'
+brew 'docker-compose'
 
-# Containers
-brew install docker
-brew install docker-compose
+brew 'awscli'
+cask 'aws-vault'
 
-brew install awscli
-brew install --cask aws-vault
+brew 'vim'
+brew 'neovim'
+cask 'visual-studio-code'
 
-brew install vim
-brew install neovim
-brew install --cask visual-studio-code
+# Know your short cuts
+cask 'cheatsheet'
+cask 'julia'
+# A powerful and stable keyboard customizer for macOS
+cask 'karabiner-elements'
+#window manager
+cask 'rectangle'
 
-# Utilities
-brew install --cask cheatsheet
-brew install --cask julia
-brew install --cask karabiner-elements
-brew install --cask rectangle
 
-# Install Mac App Store applications
-mas install 803453959 # Slack
+mas 'Slack', id: 803453959
